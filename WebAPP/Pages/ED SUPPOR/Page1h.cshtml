@@ -1,0 +1,69 @@
+@page
+@model Page1hModel
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/LockPageStyle.css">
+    <script src="~/js/Login.js" type="module"></script>
+    <title>Iniciar Sesión</title>
+</head>
+<body>
+    <div class="Main-Container">
+        <div class="Imgs">
+            <img src="~/imgs/MainPage_Logo.png" alt="MainLogo">
+        </div>
+
+        <div class="LogIn">
+            <form id="loginForm">
+                <h2>Log In</h2>
+                
+                    <label for="username">Nombre de Usuario:</label>
+                    <input type="text" id="username" name="username" required>        
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>                    
+                    <div class="Sepa">
+                        <label for="loginAsOption1">Ingresar como Opción 1</label>
+                        <input type="checkbox" id="loginAsOption1" name="loginAsOption1">
+                    </div>
+                    <button type="submit">Iniciar Sesión</button>                
+            </form>
+            <br>
+            <a href="Page2">
+                <button>Crear Cuenta</button>
+            </a>
+        </div>
+    </div>
+        <section class="Second-Container">
+        <h1>Latest featured posts</h1>
+        <div class="Features">
+            <div class="Users">
+                @* <img src="../imgs/YO.jpg" alt=""> *@
+                <div class="info">
+                    <h2>Pablo Panchig</h2>
+                    <p>PabloPanchig</p>
+                </div>
+            </div>
+            <p>We have create this new awesome brand new page</p>
+            <img src="~/imgs/Updates/Update1.png" alt="">
+        </div>
+        <div class="Features">
+            <div class="Users">
+                @* <img src="../imgs/YO.jpg" alt=""> *@
+                <div class="info">
+                    <h2>John Doe</h2>
+                    <p>JohnDoe</p>
+                </div>
+            </div>
+            <p>We have improve and created more pages</p>
+            <img src="/imgs/Updates/Update2.png" alt="">
+        </div>
+    </section>
+
+    <footer>
+        <h3>This website was created by Pablo Panchig</h3>
+        <a href="Picture.html">
+            <h3>Here is a picture of him</h3>
+        </a>
+    </footer>
+</body>
+</html>

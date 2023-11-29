@@ -1,0 +1,29 @@
+.Main-Container{
+    display: flex;
+    flex-direction: row;
+}
+
+#taskManager {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+input{
+    margin-bottom: 1em;
+}
+
+#tasksList .task {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+    padding: 10px;
+}
+  body {
+    color: black;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+  }
+  

@@ -1,0 +1,357 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WebAPP.bundle.scp.css",
+      "PackagePath": "staticwebassets\\WebAPP.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\css\\CoursePage.css",
+      "PackagePath": "staticwebassets\\css\\CoursePage.css"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\css\\LockPageStyle.css",
+      "PackagePath": "staticwebassets\\css\\LockPageStyle.css"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\css\\NavBarStyle.css",
+      "PackagePath": "staticwebassets\\css\\NavBarStyle.css"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\css\\styleDashboard.css",
+      "PackagePath": "staticwebassets\\css\\styleDashboard.css"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\css\\styleMainPeople.css",
+      "PackagePath": "staticwebassets\\css\\styleMainPeople.css"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\css\\styleMainToDo.css",
+      "PackagePath": "staticwebassets\\css\\styleMainToDo.css"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\imgs\\MainPage_Logo.png",
+      "PackagePath": "staticwebassets\\imgs\\MainPage_Logo.png"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\imgs\\Navbar\\ChatNavbar.svg",
+      "PackagePath": "staticwebassets\\imgs\\Navbar\\ChatNavbar.svg"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\imgs\\Navbar\\InstagramLogo.svg",
+      "PackagePath": "staticwebassets\\imgs\\Navbar\\InstagramLogo.svg"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\imgs\\Navbar\\LogOutNavBar.svg",
+      "PackagePath": "staticwebassets\\imgs\\Navbar\\LogOutNavBar.svg"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\imgs\\Navbar\\Logo1NavBar.svg",
+      "PackagePath": "staticwebassets\\imgs\\Navbar\\Logo1NavBar.svg"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\imgs\\Navbar\\PeopleNavBar.svg",
+      "PackagePath": "staticwebassets\\imgs\\Navbar\\PeopleNavBar.svg"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\imgs\\Navbar\\TaskNavBar.svg",
+      "PackagePath": "staticwebassets\\imgs\\Navbar\\TaskNavBar.svg"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\imgs\\Updates\\Update1.png",
+      "PackagePath": "staticwebassets\\imgs\\Updates\\Update1.png"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\imgs\\Updates\\Update2.png",
+      "PackagePath": "staticwebassets\\imgs\\Updates\\Update2.png"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\js\\Dashboard.js",
+      "PackagePath": "staticwebassets\\js\\Dashboard.js"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\js\\GetUserSource.js",
+      "PackagePath": "staticwebassets\\js\\GetUserSource.js"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\js\\Login.js",
+      "PackagePath": "staticwebassets\\js\\Login.js"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\js\\NOTALLOW.js",
+      "PackagePath": "staticwebassets\\js\\NOTALLOW.js"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\js\\ShowUser.js",
+      "PackagePath": "staticwebassets\\js\\ShowUser.js"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\js\\To_Do.js",
+      "PackagePath": "staticwebassets\\js\\To_Do.js"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\js\\TodoLogic.js",
+      "PackagePath": "staticwebassets\\js\\TodoLogic.js"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\js\\register.js",
+      "PackagePath": "staticwebassets\\js\\register.js"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\santi\\Desktop\\Programing\\Final-Project-Web_Development\\WebAPP\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebAPP.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.WebAPP.props",
+      "PackagePath": "build\\WebAPP.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.WebAPP.props",
+      "PackagePath": "buildMultiTargeting\\WebAPP.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.WebAPP.props",
+      "PackagePath": "buildTransitive\\WebAPP.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

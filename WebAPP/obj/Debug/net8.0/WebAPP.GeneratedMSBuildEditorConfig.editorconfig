@@ -1,0 +1,87 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = WebAPP
+build_property.RootNamespace = WebAPP
+build_property.ProjectDir = C:\Users\santi\Desktop\Programing\Final-Project-Web_Development\WebAPP\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\santi\Desktop\Programing\Final-Project-Web_Development\WebAPP
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/santi/Desktop/Programing/Final-Project-Web_Development/WebAPP/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/santi/Desktop/Programing/Final-Project-Web_Development/WebAPP/Pages/ED SUPPOR/CoursePage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRUQgU1VQUE9SXENvdXJzZVBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/santi/Desktop/Programing/Final-Project-Web_Development/WebAPP/Pages/ED SUPPOR/Page1h.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRUQgU1VQUE9SXFBhZ2UxaC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/santi/Desktop/Programing/Final-Project-Web_Development/WebAPP/Pages/ED SUPPOR/Page2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRUQgU1VQUE9SXFBhZ2UyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/santi/Desktop/Programing/Final-Project-Web_Development/WebAPP/Pages/ED SUPPOR/Page3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRUQgU1VQUE9SXFBhZ2UzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/santi/Desktop/Programing/Final-Project-Web_Development/WebAPP/Pages/ED SUPPOR/Page4.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRUQgU1VQUE9SXFBhZ2U0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/santi/Desktop/Programing/Final-Project-Web_Development/WebAPP/Pages/ED SUPPOR/People.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRUQgU1VQUE9SXFBlb3BsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/santi/Desktop/Programing/Final-Project-Web_Development/WebAPP/Pages/ED SUPPOR/Share.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRUQgU1VQUE9SXFNoYXJlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/santi/Desktop/Programing/Final-Project-Web_Development/WebAPP/Pages/ED SUPPOR/Todo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRUQgU1VQUE9SXFRvZG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/santi/Desktop/Programing/Final-Project-Web_Development/WebAPP/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/santi/Desktop/Programing/Final-Project-Web_Development/WebAPP/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/santi/Desktop/Programing/Final-Project-Web_Development/WebAPP/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/santi/Desktop/Programing/Final-Project-Web_Development/WebAPP/Pages/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/santi/Desktop/Programing/Final-Project-Web_Development/WebAPP/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/santi/Desktop/Programing/Final-Project-Web_Development/WebAPP/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/santi/Desktop/Programing/Final-Project-Web_Development/WebAPP/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/santi/Desktop/Programing/Final-Project-Web_Development/WebAPP/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-7mjmxwnd8v
