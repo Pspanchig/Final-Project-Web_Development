@@ -1,17 +1,1 @@
-[
-    {
-        "Name": "PabloP",
-        "Password": "123",
-        "IsProffesor": true
-    },
-    {
-        "Name": "32423",
-        "Password": "324314",
-        "IsProffesor": true
-    },
-    {
-        "Name": "12345",
-        "Password": "12345",
-        "IsProffesor": true
-    }
-]
+[{"Name":"PabloP","Password":"123","IsProffesor":true},{"Name":"32423","Password":"324314","IsProffesor":true},{"Name":"12345","Password":"12345","IsProffesor":true},{"Name":"PabloSP","Password":"123","IsProffesor":true}]
