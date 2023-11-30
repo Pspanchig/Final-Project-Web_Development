@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/FrontEnd/CSS/LockPageStyle.css">
+    <script src="/FrontEnd/js/register.js" type="module"></script>
+    <script src="/FrontEnd/js/test.js" type="module"></script>
+    <title>Crear Cuenta</title>
+</head>
+<body>
+    <div class="Main-Container">
+            <div class="Imgs">
+                <img src="/FrontEnd/imgs/MainPage_Logo.png" alt="MainLogo">
+            </div>
+            
+        <div class="LogIn">
+            <form id="registerForm">
+            <h2>Create Account</h2>
+                
+                    <label for="username">UserName:</label>
+                    <input type="text" id="username" name="username" required>                                
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>                    
+                    
+                    
+                        <input type="radio" id="option1" name="option" value="Opción 1" required>
+                        <label for="option1">Teacher</label>
+                    <div id="codeSection" style="display: none;">
+                        <label for="code">Write the teacher's code:</label>
+                        <input type="text" id="code" name="code" required>
+                    </div>
+                    
+                    <label for="option2">Student</label>
+                    <input type="radio" id="option2" name="option" value="Opción 2" required>                                                                
+                
+                    <button type="submit">Create account</button>            
+                
+            </form>
+            <a href="index.html">
+                <button type="button">Go Back</button>
+            </a>
+        </div>    
+    </div>
+</body>
+</html>

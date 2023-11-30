@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/FrontEnd/CSS/NavBarStyle.css">    
+    <link rel="stylesheet" href="/FrontEnd/CSS/styleDashboard.css">    
+    
+    <script src="/FrontEnd/js/Dashboard.js" type="module"></script>
+    <script src="/FrontEnd/js/NOTALLOW.js" type="module"></script>    
+    <title>Home</title>
+</head>
+<body>
+    <div class="Main-Container">
+        <nav class="navbar">
+            <ul class="navbar-nav">
+              <li class="logo">
+                <a href="Page3.html" class="nav-link">
+                  <span class="logo-text">Ed Suppor</span>                  
+                </a>
+              </li>
+                <li class="nav-item">
+                    <a href="Page3.html" class="nav-link">
+                        <img src="./imgs/Navbar/Logo1NavBar.svg" alt="">
+                        <span class="link-text">Classes</span>                        
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="Todo.html" class="nav-link">
+                        <img src="./imgs/Navbar/TaskNavBar.svg" alt="">
+                        <span class="link-text">To Do</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="People.html" class="nav-link">
+                        <img src="./imgs/Navbar/PeopleNavBar.svg" alt="">
+                        <span class="link-text">People</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="Share.html" class="nav-link">
+                        <img src="./imgs/Navbar/ChatNavbar.svg" alt="">
+                        <span class="link-text">Share</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a id="LogOut" href="index.html" class="nav-link">
+                        <img src="./imgs/Navbar/LogOutNavBar.svg" alt="">
+                        <span class="link-text">Log Out</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="Dashbord">
+            <h1>Dashbord</h1>
+            <h2 id="WelcomeID">Welcome Back !</h2>
+            <form action="#">
+                <label for="Class">Course Name</label><br>
+                <input type="Class" id="Class" name="Class" required placeholder="Course Name">        <br>
+                <label for="Number">Course Number:</label><br>
+                <input type="Number" id="Number" name="Number" required placeholder="Course Number">                    <br>
+                <label for="Info">Information:</label><br>
+                <input type="Info" id="Info" name="Info" required placeholder="Information">                    <br>
+                <button id="Create">Create Class</button>
+            </form>
+            <hr>
+            <div class="subContainer">
+                <a href="CoursePage.html">
+                    <div class="Dashbord-Container">
+                        <div class="Dashbord-Container-Item">
+                            <h2 id="Course-name">Physics</h2>
+                            <h3 id="Course-#">1010</h3>
+                            <hr>
+                            <p id="Course-Description">Description</p>
+                        </div>
+                    </div>
+                </a>                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

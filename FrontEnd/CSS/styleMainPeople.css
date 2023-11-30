@@ -1,0 +1,97 @@
+:root {
+  --primary-color: #2a2a2a; /* Dark gray - text */
+  --secondary-color: #C70039;
+  --background-color: #f8f8f8; /* Off-white - backgrounds */
+  --border-radius: 0.5em; /* Consistent border radius */
+  --box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.Main-Container{
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.navbar {
+  /* position: fixed; */
+  background-color: #b9b9b9;
+}
+:root {
+  font-size: 16px;
+  font-family: 'Open Sans';
+  --text-primary: #000000;
+  --text-secondary: #ececec;
+  --bg-primary: #2c2222;
+  --bg-secondary: #C70039;
+  --transition-speed: 600ms;
+}
+
+.Users{
+  margin-left: 3em;
+
+  margin: 1em;
+  height: 100%;
+  min-height: 95vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:start;
+  overflow-x: auto;
+  background-color: rgb(240, 240, 240);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius); 
+}
+
+.Groups-Conainer{
+  
+  min-height: 92vh;
+  max-height: 92vh;
+  min-width: 50%;
+  margin-right: 2em;
+  margin-left: 2em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: white;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius); 
+  overflow-x: auto;
+  overflow-y: auto;
+}
+.List-User:first-child{
+  margin-right: auto;
+  margin-bottom: auto;
+}
+.List-User{
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius); 
+  background-color: white;
+  min-width: 24em;
+  padding: 2em;
+  margin: 2em;
+  min-height: 90vh;
+}
+.List-User h2, .Groups h2{
+  text-align: center;
+  background-color: var(--secondary-color);
+  padding: 0.2em;
+  color: white;
+  border-radius: var(--border-radius);
+}
+#userList{
+margin-top: 1em;
+  
+}
+.Groups{
+  padding: 2em;
+  background-color: rgb(240, 240, 240);
+  margin: 2em;
+  min-height: 15em;
+  min-width: 15em;
+  max-height: 20em;
+  max-width: 20em;
+
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+}
+
