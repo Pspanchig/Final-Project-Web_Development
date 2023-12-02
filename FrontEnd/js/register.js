@@ -16,7 +16,7 @@ export function registerUser() {
     
 
     if (localStorage.getItem(username)) {
-        alert('El nombre de usuario ya está en uso. Por favor, elige otro.');
+        alert('That name is already being used, please choose other one');
         return;
     }
 
@@ -30,7 +30,7 @@ export function registerUser() {
     CreateUserAPI(username, password, isOptionOne);    
     localStorage.setItem(username, JSON.stringify(user));
     alert('Usuario registrado con éxito');
-    window.location.href = 'index.html'; 
+    window.location.href = '/index.html'; 
 }
 
 document.getElementById('registerForm').addEventListener('submit', function(e) {
@@ -55,7 +55,7 @@ async function CreateUserAPI(User, Passwrord, bool){
     const NewUser ={
         Name: User,
         Password: Passwrord,
-        IsProffesor: bool
+        IsProffesor: bool        
     }
     
     await fetch(APIURL + "NewUser", {
@@ -64,6 +64,6 @@ async function CreateUserAPI(User, Passwrord, bool){
         body: JSON.stringify(NewUser)
     })
       
-    const UsersResponse = await fetch(APIURL + "OtherPath")    
+    const UsersResponse = await fetch(APIURL + "UserInfo")    
     console.log("UsersResponse", await UsersResponse.text());
 }

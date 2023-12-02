@@ -36,8 +36,9 @@ a:hover{
 .Dashbord-Container-Item, h3{
   text-align: center;
 }
-.Dashbord-Container-Item, h2{
-  text-align: start;
+.Dashbord-Container-Item h2{
+  text-align: center;
+  margin: 0;
 }
 .Dashbord-Container{  
   margin: 1em;

@@ -1,1 +1,0 @@
-public record User(string Name, string Password, bool IsProffesor);
