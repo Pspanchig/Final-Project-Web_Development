@@ -95,8 +95,8 @@ app.MapGet("/ChatInfo/{ChatId}", (int ChatId) => {
     var chat = Chats.FirstOrDefault(t => t.ID == ChatId);
     return chat is not null ? Results.Json(chat) : Results.NotFound("Chat not found");
 });
-app.MapDelete("/ChatInfo/{ChatId}", (int taskId) => {
-    Chats.RemoveAt(taskId);
+app.MapDelete("/ChatInfo/{ChatId}", (int ChatId) => {
+    Chats.RemoveAt(ChatId);
     string json = JsonSerializer.Serialize(Chats);
     File.WriteAllText(ChatsPath, json);
 });
