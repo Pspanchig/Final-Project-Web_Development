@@ -44,7 +44,11 @@ function AddCourseToDOM(courseNameValue, courseNumberValue,courseDescValue){
     anchor.appendChild(newElement);
     subContainer.appendChild(anchor);  
 }
-
+document.addEventListener('DOMContentLoaded', (event) => {
+    document.getElementById('CreateClassButton').addEventListener('click', function() {
+        document.getElementById('ClassForm').style.display = 'block';
+    });
+});
 async function CreateClassAPI(courseNameValue, courseNumberValue, courseDescValue) {
     const APIURL = 'http://localhost:5006/NewClass';
     const currentUser = getCurrentUser();
@@ -60,10 +64,6 @@ async function CreateClassAPI(courseNameValue, courseNumberValue, courseDescValu
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(NewClass)
     });
-
-    if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-    }
     const responseData = await response.json();
     console.log("Class created successfully:", responseData);
 

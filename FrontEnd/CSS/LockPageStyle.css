@@ -109,12 +109,12 @@ body {
 input[type='radio'] {
     display: none;
     
-}
+} 
 
 input[type='radio']:checked + label {
     background-color: var(--secondary-color);
     color: white;
-}
+} 
 
 .Second-Container {
     display: flex;

@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/FrontEnd/CSS/NavBarStyle.css">    
+    <link rel="stylesheet" href="/FrontEnd/CSS/styleShare.css">    
     <script src="/FrontEnd/js/NOTALLOW.js" type="module"></script>    
-
+    <script src="/FrontEnd/js/Share.js" type="module"></script>    
     <title>Document</title>
 </head>
 <body>
@@ -50,6 +51,58 @@
                 </li>
             </ul>
         </nav>
+        <div class="Chat-Container">
+            <div class="Containerfortwo">
+                <div class="Rulers">
+                    <h1>Rulers</h1>
+                    <p>You must follow this rulers in order to post something</p>
+                    <ol>
+                        <li>
+                            <h4>Respect Everyone:</h4>
+                        </li>
+                        <li>
+                            <h4>Stay on Topic:</h4>
+                        </li>
+                        <li>
+                            <h4>No Spamming:</h4>
+                        </li>
+                        <li>
+                            <h4>Follow the Law and Platform Guidelines:</h4>
+                        </li>
+                    </ol>
+                </div>
+                <div class="Rulers">
+                    <h1 id="change">Welcome Back you!</h1>
+                    <p>This is where all your posts will be shown, so make sure that they are respectful.</p>
+                    <hr>
+                    <form action="#">
+                        <label for="text">What are you thinking?</label><br>
+                        <input type="text" id="ChatText" placeholder="Write it here!" required>
+                        <button id="button" type="submit">Share it!</button>
+                        <button type="reset">Delete it :(</button>
+                    </form>
+                </div>
+
+            </div>
+            <div class="StudentChat">
+                <h1>Main Chat</h1>
+                <hr>
+                
+                <div class="subcontainer" id="subcontainer">
+                    <div class="Chat">
+                        <h3>Juan Cuellas</h3>
+                        <h4>Student</h4>
+                        <p>Hola Como Estas</p>
+                    </div>
+                    <div class="Chat">
+                        <h3>Juan Cuellas</h3>
+                        <h4>Student</h4>
+                        <p>Hola Como Estas</p>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
     </div>
 </body>
 </html>

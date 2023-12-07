@@ -61,20 +61,36 @@
                 <h1>List of users</h1>
                 <div id="userList"></div>
             </div>
-            <div class="Groups-Conainer">
-                
-                <div class="Groups">
-                    <h2>Users</h2>
-                    <h1>List of users</h1>
-                </div>
-                <div class="Groups">
-                    <h2>Users</h2>
-                    <h1>List of users</h1>
-                </div>
-                <div class="Groups">
-                    <h2>Users</h2>
-                    <h1>List of users</h1>
-                </div>
+            <div class="List-User" id="studentsList">
+                <h2>Create Groups</h2>
+
+                <form action="" id="CreateGrooup">                                        
+                    <h3>Choose the class</h3>
+                    <select id="dropdown" name="Hola" required>
+                        <option value="">None</option>                    
+                    </select>
+                    <h3>Group Name</h3>
+                    <input type="text" placeholder="Enter Group Name..." id="groupName"/><br><br>
+                    <div id="students">
+                        <h3>Choose the students</h3>
+                    </div>
+                    <input type="checkbox" id="checkAll"> Select all
+                    <h3>Groups descrpition</h3>
+                    <input type="text" id="DescriptionofGroup">
+                    <button type="submit">Create</button>
+                    <button type="reset">reset</button>
+                </form>
+            </div>
+            <div class="TitleGroups">
+                <h1>Groups</h1>
+                <div class="Groups-Conainer" id="Groups-Conainer">                
+                    <div class="Groups">
+                        <h2 id="groupC">Users</h2>
+                        <h1 id="groupNe">Group Name</h1>
+                        <h3 id="groupS">List of users</h3>
+                        <p id="groupd">descrpition</p>
+                    </div>
+            </div>
             </div>
         </div>
     </div>

@@ -1,4 +1,4 @@
-export function registerUser() {
+async function registerUser() {
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
     var code = document.getElementById('code').value;
@@ -13,13 +13,20 @@ export function registerUser() {
         document.getElementById('codeSection').style.display = 'none';
     });
 
+    const APIURL = 'http://localhost:5006/';
     
+    const response = await fetch(APIURL);
+    console.log('respons', await response.text())
+
 
     if (localStorage.getItem(username)) {
         alert('That name is already being used, please choose other one');
         return;
     }
 
+    if (selectedOption === 'Opción 2') {
+        isOptionOne = false;
+    } 
     if (selectedOption === 'Opción 1' && code === "1") {
         isOptionOne = true;
     } else if (selectedOption === 'Opción 1') {
@@ -30,7 +37,7 @@ export function registerUser() {
     CreateUserAPI(username, password, isOptionOne);    
     localStorage.setItem(username, JSON.stringify(user));
     alert('Usuario registrado con éxito');
-    window.location.href = '/index.html'; 
+    window.location.href = '/FrontEnd/Page3.html';
 }
 
 document.getElementById('registerForm').addEventListener('submit', function(e) {
@@ -55,7 +62,7 @@ async function CreateUserAPI(User, Passwrord, bool){
     const NewUser ={
         Name: User,
         Password: Passwrord,
-        IsProffesor: bool        
+        IsProffesor: bool,
     }
     
     await fetch(APIURL + "NewUser", {

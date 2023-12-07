@@ -112,5 +112,5 @@ app.Run();
 public record Chat(string User, string Text, bool IsProffesor, int ID);
 public record User(string Name, string Password, bool IsProffesor);
 public record Course(string Title, int Number, string info, string Owner);
-public record TODO(string Title, string Info, string Owner, int ID);
+public record TODO(string CourseName, string Title, string Info, string Owner, int ID);
 public record Group(string Title, string Class, string[] Students, string Info);

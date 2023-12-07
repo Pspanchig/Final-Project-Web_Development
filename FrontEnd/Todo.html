@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/FrontEnd/CSS/NavBarStyle.css">    
     <script src="/FrontEnd/js/To_Do.js" type="module"></script>
     <script src="/FrontEnd/js/NOTALLOW.js" type="module"></script>    
-    <title>Home</title>
+    <title>ToDo</title>
 </head>
 <body>
     <div class="Main-Container">
@@ -50,16 +50,39 @@
                 </li>
             </ul>
         </nav>
+        
+        <div id="taskManager">        
+        <div id="tasksList" class="TaskContainer">
+            <div id="taskListLeft" class="taskListColumn">
+                <label for="find">Search Task</label>
+                <input type="text" id="find" placeholder="Search...">
+                <h2>Tasks</h2> <!-- Title for the tasks column -->
+            </div>
+            <div id="taskListRight" class="taskListColumn">
+                <label for="find">Search Task</label>
+                <input type="text" id="find" placeholder="Search...">
+                <h2>Other Column</h2> <!-- Title for the right column, can be renamed appropriately -->
+            </div>
+        </div>
+            <div class="TaskCreator">
+                <h1>CREATE NEW TASK</h1>
+                <div class="SubClassContainer">
+                    <label for="taskInput">Select class</label>
+                    <select id="dropdown1" name="Hola" required>
+                        <option value="">None</option>                    
+                    </select>
+                    <div id="Tasks1">
 
-    <div id="taskManager">
-            <label for="text">Title</label>
-            <input type="text" id="taskInput" placeholder="Enter a task title">
-            <label for="text">Info</label>
-            <input type="text" id="InfoInput" placeholder="Enter a task information">
-            <button id="addTaskButton">Add Task</button>
-            <div id="tasksList"></div>
+                    </div>
+                    <label for="taskInput">Title</label>
+                    <input type="text" id="taskInput" placeholder="Enter a task title">
+                    <label for="InfoInput">Info</label>
+                    <input type="text" id="InfoInput" placeholder="Enter a task information">
+                    <button id="addTaskButton">Add Task</button>
+                </div>
+            </div>                        
     </div>
-
+        
 </div>
 
     </div>

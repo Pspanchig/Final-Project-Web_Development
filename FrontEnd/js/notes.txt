@@ -1,0 +1,3 @@
+domain: data is in the browaer
+SVC: API
+UI: domain

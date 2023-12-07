@@ -45,3 +45,4 @@ document.addEventListener('DOMContentLoaded', () => {
         loginUser();
     });    
 });
+localStorage.clear();

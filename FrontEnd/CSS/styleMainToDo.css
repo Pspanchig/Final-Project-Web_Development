@@ -1,19 +1,108 @@
+:root {
+    --primary-color: #2a2a2a; /* Dark gray - text */
+    --secondary-color: #C70039;
+    --background-color: #f8f8f8; /* Off-white - backgrounds */
+    --Box-color:  #dad8d8;
+    --border-radius: 0.5em; /* Consistent border radius */
+    --box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.397); /* Subtle shadow */
+  }
+  
 .Main-Container{
     display: flex;
     flex-direction: row;
+    
 }
+.TaskContainer{
+    margin: 5em;
+    width: 40%;
+    min-width: 40%;
+    display: flex;
+    justify-content: space-around;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    background-color: var(--Box-color);
+    min-height: auto;   
+}
+.TaskCreator, .SubClassContainer{
+    margin: 5em;
+    width: 40%;
+    min-width: 40%;
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    background-color: var(--Box-color);
+    min-height: auto;   
+    align-items: center;
+    /* justify-content: ce; */
+}
+.SubClassContainer{
+    display: flex;
+    margin: 0em;
+    background-color: rgba(255, 255, 255, 0.708);
+    min-height: 80%;
+    min-width: 90%;
+}
+.TaskCreator label, .TaskCreator input, .TaskCreator button{
+    margin-left: 2em;
+    margin-right: 2em;
+}
+.TaskCreator label{
+    background-color: var(--secondary-color);
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+    border-radius: var(--border-radius);    
+    width: 70%;
 
+}
+.TaskCreator button{    
+    background-color: greenyellow;
+    height: 3em;
+    width: 10em;
+    border-radius: var(--border-radius);
+}
+.TaskCreator input{
+    width: 70%;
+    border-radius: var(--border-radius);
+    height: 3em;
+}
+.taskListColumn{    
+    max-width: 35vh;
+}
+.taskListColumn h2{
+    padding: 1em;
+    border-radius: var(--border-radius);
+    background-color: var(--secondary-color);
+}
 #taskManager {
     margin: auto;
     width: 50%;
     padding: 10px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    margin: 1em;
+    height: 95vh;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius); 
+    width: 100%;
+    background-color: var(--background-color);
+    overflow-y: auto;
 }
 input{
     margin-bottom: 1em;
 }
+.TaskContainer {
+    display: flex;    
+}
 
+.taskListColumn {
+    flex: 1; /* Each column takes up equal width */
+    padding: 10px; /* Adjust padding as needed */
+}
+.task{
+    cursor: grab;
+}
 #tasksList .task {
     background-color: #f4f4f4;
     border: 1px solid #ddd;
