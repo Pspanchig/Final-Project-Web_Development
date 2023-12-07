@@ -1,12 +1,27 @@
 [
     {
-        "Name": "Hol",
-        "Password": "Hol",
-        "IsProffesor": true
-    },
-    {
         "Name": "Perro",
         "Password": "123",
         "IsProffesor": true
+    },
+    {
+        "Name": "123",
+        "Password": "123",
+        "IsProffesor": true
+    },
+    {
+        "Name": "321",
+        "Password": "321",
+        "IsProffesor": true
+    },
+    {
+        "Name": "student",
+        "Password": "123",
+        "IsProffesor": false
+    },
+    {
+        "Name": "student1",
+        "Password": "1",
+        "IsProffesor": false
     }
 ]

@@ -42,23 +42,75 @@ app.MapPost("/NewClass", (Course clas) => {
     File.WriteAllText(filepath1, json1);
 });
 ////////////////////////////////////////////////////////////////////
-string filepath2 = "Todo.json";
+string todoPaht = "Todo.json";
 List<TODO> TODOs = new();
 
-if(File.Exists(filepath2)){
-    string readusers2 = File.ReadAllText(filepath2);
+if(File.Exists(todoPaht)){
+    string readusers2 = File.ReadAllText(todoPaht);
     TODOs.AddRange(JsonSerializer.Deserialize<List<TODO>>(readusers2));
 }
 
 app.MapGet("/TasksInfo", () => TODOs);
+app.MapGet("/TasksInfo/{taskId}", (int taskId) => {
+    var task = TODOs.FirstOrDefault(t => t.ID == taskId);
+    return task is not null ? Results.Json(task) : Results.NotFound("Task not found");
+});
+app.MapDelete("/TasksInfo/{taskId}", (int taskId) => {
+    TODOs.RemoveAt(taskId);
+    string json = JsonSerializer.Serialize(TODOs);
+    File.WriteAllText(todoPaht, json);
+});
+
 app.MapPost("/NewTask", (TODO Todo) => {
     TODOs!.Add(Todo);
     string json2 = JsonSerializer.Serialize(TODOs);
-    File.WriteAllText(filepath2, json2);
+    File.WriteAllText(todoPaht, json2);
+});
+////////////////////////////////////////////////////////////////////
+string filepath3 = "groups.json";
+List<Group> groups = new();
+
+if(File.Exists(filepath3)){
+    string readusers1 = File.ReadAllText(filepath3);
+    groups.AddRange(JsonSerializer.Deserialize<List<Group>>(readusers1));
+}
+
+app.MapGet("/GroupInfo", () => groups);
+app.MapPost("/NewGroup", (Group group) => {
+    groups!.Add(group);
+    string json3 = JsonSerializer.Serialize(groups);
+    File.WriteAllText(filepath3, json3);
+});
+////////////////////////////////////////////////////////////////////
+string ChatsPath = "Chat.json";
+List<Chat> Chats = new();
+
+if(File.Exists(ChatsPath)){
+    string readusers2 = File.ReadAllText(ChatsPath);
+    Chats.AddRange(JsonSerializer.Deserialize<List<Chat>>(readusers2));
+}
+
+app.MapGet("/ChatInfo", () => Chats);
+app.MapGet("/ChatInfo/{ChatId}", (int ChatId) => {
+    var chat = Chats.FirstOrDefault(t => t.ID == ChatId);
+    return chat is not null ? Results.Json(chat) : Results.NotFound("Chat not found");
+});
+app.MapDelete("/ChatInfo/{ChatId}", (int taskId) => {
+    Chats.RemoveAt(taskId);
+    string json = JsonSerializer.Serialize(Chats);
+    File.WriteAllText(ChatsPath, json);
+});
+
+app.MapPost("/NewChat", (Chat chat) => {
+    Chats!.Add(chat);
+    string json2 = JsonSerializer.Serialize(Chats);
+    File.WriteAllText(ChatsPath, json2);
 });
 
 app.Run();
 
+public record Chat(string User, string Text, bool IsProffesor, int ID);
 public record User(string Name, string Password, bool IsProffesor);
 public record Course(string Title, int Number, string info, string Owner);
 public record TODO(string Title, string Info, string Owner, int ID);
+public record Group(string Title, string Class, string[] Students, string Info);
