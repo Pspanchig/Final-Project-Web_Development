@@ -35,6 +35,25 @@ input[type='radio']:checked + label {
   background-color: var(--secondary-color);
   color: white;
 } 
+.PositionFix{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.CreateClassButton{
+  margin-top: auto;
+}
+.PositionFix button{
+  background-color: var(--secondary-color);
+  color: white;
+  width: 20em;
+  border-radius: var(--border-radius);
+  height: 3em;
+  font-size: 1em;
+
+}
 label{
   max-width: 8em;
   border-radius: var(--border-radius);

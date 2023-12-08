@@ -2,10 +2,7 @@ import { getCurrentUser } from "./GetUserSource.js";
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    
-    const searchInput = document.getElementById('searchInput');
-    // searchInput.addEventListener('keyup', filterTasks);
-    
+        
     document.getElementById('addTaskButton').addEventListener('click', function() {
         const taskInputElem = document.getElementById('taskInput');
         const taskInfoInputElem = document.getElementById('InfoInput');
@@ -27,22 +24,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });    
 });
 function searchInput() {
-    console.log('RUning')
+    console.log('Running searchInput');
     const filter = document.getElementById("find").value.toUpperCase();
     const tasks = document.querySelectorAll(".task");
     
     tasks.forEach(task => {
         let h2 = task.querySelector('h2'); 
         if (h2) {
-            let text = h2.textContent || h2.innerText;
+            let text = h2.textContent; // Using textContent for consistency
             if (text.toUpperCase().indexOf(filter) > -1) {
-                task.style.display = ""; 
+                task.style.display = "block"; // Set this to your default display style
             } else {
                 task.style.display = "none";
             }
         }
     });
 }
+
 
 document.getElementById("find").addEventListener('input', searchInput);
 
@@ -146,7 +144,6 @@ async function RemoveElementFromAPI(id) {
         },            
     });                
     console.log(`Element with ID ${id} was removed successfully.`);    
-
 }
 
 
@@ -174,54 +171,53 @@ async function CreateTaskAPI(username, taskTitle, taskInfo){
     
 }
 
-var students = [];
+var students1 = [];
 var classes = [];
-loadStudentsForClass()
 async function loadStudentsForClass() {    
-    const classId = document.getElementById('dropdown1').value;
     const studentsList = document.getElementById('Tasks1');
-    
+    const classId = document.getElementById('dropdown1').value;
+
+    // Clear existing content
+    studentsList.innerHTML = '';
+
     const APIS = 'http://localhost:5006/UserInfo';
     const responseS = await fetch(APIS);
-    students = await responseS.json();
+    const students1 = await responseS.json(); 
     
     const APIURL = 'http://localhost:5006/ClassInfo';
     const response = await fetch(APIURL);
-    classes = await response.json();
+    const classes = await response.json(); 
     
-    studentsList.innerHTML = '';
-    const Title = document.createElement('h3');                
-    Title.textContent = 'Choose the students';
-    const displayedStudentNames = [];
-    studentsList.appendChild(Title);
-    students.forEach(student => {
-        classes.forEach(classes => {
-            console.log(classId)
-            if (student == classes.owner) {
-                let student  = getCurrentUser().username;
-                const studentCheckbox = document.createElement('input');
-                studentCheckbox.addEventListener('click', SaveStudentsbyClick);
-                studentCheckbox.type = 'checkbox';
-                studentCheckbox.value = student.name;
-                studentCheckbox.setAttribute('id', "checkBox" + student.name)                
-                
+    const h1 = document.createElement('h3');
+    h1.innerText = 'TEXTO';
+    studentsList.appendChild(h1);
+    console.log('Showing after dropdown');
+    classes.forEach(classe => {
+        students1.forEach(student1 =>{
+            console.log('Student:' + classId)
+
+            if(student1 && student1.name === classe.owner && classId === classe.title){
+
+                const studentsinput = document.createElement('input');
+                studentsinput.type = 'checkbox';
+                studentsinput.classList.add('Checkbox'); // Add class to the checkbox
+            
                 const label = document.createElement('label');
-                label.textContent = student.name; 
-                studentsList.appendChild(studentCheckbox);
+                label.innerHTML = classe.owner; // Consider using dynamic student data
+                label.classList.add('CheckboxLabel'); // Add class to the label
+                
+                studentsList.appendChild(studentsinput);
                 studentsList.appendChild(label);
-                studentsList.appendChild(document.createElement('br')); 
-                if(studentCheckbox.checked){
-                    displayedStudentNames.push(student.name);
-                    console.log("Testing");
-                }
             }
         })
-    });    
+        
+    });
 }
+
 
 let owners = [];
 function SaveStudentsbyClick() {
-    const classId = document.getElementById('dropdown').value; 
+    const classId = document.getElementById('dropdown1').value; 
     const selectedClasses = classes.filter(classObject => classObject.title === classId);
 
     const studentChecked = selectedClasses.filter(classObject => {
@@ -250,15 +246,17 @@ async function LoadCoursesForUser() {
         option.textContent = course.title;
         dropdown.appendChild(option);
     });
+
+    
 }
 var course; // Corrected variable name
 
 LoadCoursesForUser().then(() => {
     const dropdown = document.getElementById('dropdown1');
-
+    
     // Attach an event listener to the dropdown to handle change events
     dropdown.addEventListener('change', () => {
         course = dropdown.value; // Assign the value to 'course'
-        console.log(course); // Log 'course', not 'couser'
+        loadStudentsForClass()
     });
 });

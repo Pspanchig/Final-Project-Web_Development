@@ -36,6 +36,10 @@
     align-items: center;
     /* justify-content: ce; */
 }
+.TaskCreator{
+    min-width: 40em;
+    width: 40%;
+}
 .SubClassContainer{
     display: flex;
     margin: 0em;
@@ -56,6 +60,7 @@
     width: 70%;
 
 }
+
 .TaskCreator button{    
     background-color: greenyellow;
     height: 3em;
@@ -69,11 +74,16 @@
 }
 .taskListColumn{    
     max-width: 35vh;
+    max-height: 80vh;
+    overflow-y: auto;
 }
 .taskListColumn h2{
     padding: 1em;
     border-radius: var(--border-radius);
     background-color: var(--secondary-color);
+}
+.taskListRight{
+    background-color: yellow;
 }
 #taskManager {
     margin: auto;
@@ -88,12 +98,18 @@
     width: 100%;
     background-color: var(--background-color);
     overflow-y: auto;
+    align-items: center;
+    justify-content: center;
 }
 input{
     margin-bottom: 1em;
 }
 .TaskContainer {
     display: flex;    
+    overflow-y: auto;
+    min-height: 70%;    
+    min-width: 40em;
+    width: 40%;    
 }
 
 .taskListColumn {
@@ -101,7 +117,19 @@ input{
     padding: 10px; /* Adjust padding as needed */
 }
 .task{
+    font-size: 15px; /* Sets the font size to 12 pixels */
     cursor: grab;
+    /* height: 100%; */
+    max-width: 100%;
+    border: 2px solid black;
+    box-shadow: var(--box-shadow);
+}
+.task h1{
+    background-color: #2a2a2a;
+    text-align: center;
+    /* width: 10em; */
+    color: white;
+    border-radius: 1em;
 }
 #tasksList .task {
     background-color: #f4f4f4;
@@ -115,4 +143,18 @@ input{
     margin: 0;
     padding: 0;
   }
-  
+  .TaskDisplay{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    max-height: 10em;
+  }
+.TaskDisplay input{
+    width: 3em;
+}
+.TaskDisplay label{
+    width: 10em;
+}
