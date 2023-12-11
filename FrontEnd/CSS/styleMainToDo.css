@@ -150,11 +150,23 @@ input{
     align-items: center;
     justify-content: center;
     overflow-y: auto;
-    max-height: 10em;
+    max-height: 20em;
+    /* max-width: 15em; */
   }
+  .TaskDisplay:first-child{
+    margin-top: auto;    
+  }
+.DIVTASK{
+    display: flex;
+    max-width: 10em;
+}
 .TaskDisplay input{
+
+    padding: 0;
     width: 3em;
 }
 .TaskDisplay label{
+    background-color: white;
+    padding: 0;
     width: 10em;
 }

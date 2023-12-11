@@ -82,12 +82,12 @@ function createElement(taskTitle, taskDescription, id,courseName) {
 
     const taskDiv = document.createElement('div');
     taskDiv.classList.add('task');
-    taskDiv.setAttribute('data-task-id', id); // Set a data attribute for the task ID
+    taskDiv.setAttribute('data-task-id', id); 
     
-    const taskCourse = document.createElement('h1'); // Use h3 for task titles within the column
+    const taskCourse = document.createElement('h1');
     taskCourse.textContent = courseName;
 
-    const taskTitleElement = document.createElement('h3'); // Use h3 for task titles within the column
+    const taskTitleElement = document.createElement('h3');
     taskTitleElement.textContent = taskTitle;
 
     taskDiv.setAttribute('draggable', 'true');
@@ -148,91 +148,83 @@ async function RemoveElementFromAPI(id) {
 
 
 
-async function CreateTaskAPI(username, taskTitle, taskInfo){
-    
-    const Task = {
-        CourseName: course,
-        Title: taskTitle,
-        Info: taskInfo,
-        Owner: username,
-        ID: getNewTaskId()
-    };
+async function CreateTaskAPI(username, taskTitle, taskInfo) {
+    console.log("Esta Funcionando: " + CreateStudent);
 
-    const APIURL = 'http://localhost:5006/NewTask';            
-    const response = await fetch(APIURL, {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify(Task)
-    });
+    for (let index = 0; index < CreateStudent.length; index++) {
+        const Student = CreateStudent[index];
 
+        const Task = {
+            CourseName: course, 
+            Title: taskTitle,
+            Info: taskInfo,
+            Owner: Student, 
+            ID: getNewTaskId()
+        };
 
-    const responseData = await response.json();
-    console.log("Task created successfully:", responseData);
-    
+        const APIURL = 'http://localhost:5006/NewTask';
+        await fetch(APIURL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(Task)
+        });
+    }
 }
+
 
 var students1 = [];
 var classes = [];
+
 async function loadStudentsForClass() {    
     const studentsList = document.getElementById('Tasks1');
     const classId = document.getElementById('dropdown1').value;
 
-    // Clear existing content
     studentsList.innerHTML = '';
 
     const APIS = 'http://localhost:5006/UserInfo';
     const responseS = await fetch(APIS);
-    const students1 = await responseS.json(); 
+    students1 = await responseS.json(); 
     
     const APIURL = 'http://localhost:5006/ClassInfo';
     const response = await fetch(APIURL);
-    const classes = await response.json(); 
-    
-    const h1 = document.createElement('h3');
-    h1.innerText = 'TEXTO';
-    studentsList.appendChild(h1);
-    console.log('Showing after dropdown');
-    classes.forEach(classe => {
-        students1.forEach(student1 =>{
-            console.log('Student:' + classId)
-
-            if(student1 && student1.name === classe.owner && classId === classe.title){
-
-                const studentsinput = document.createElement('input');
-                studentsinput.type = 'checkbox';
-                studentsinput.classList.add('Checkbox'); // Add class to the checkbox
-            
-                const label = document.createElement('label');
-                label.innerHTML = classe.owner; // Consider using dynamic student data
-                label.classList.add('CheckboxLabel'); // Add class to the label
-                
-                studentsList.appendChild(studentsinput);
-                studentsList.appendChild(label);
-            }
-        })
+    classes = await response.json(); 
         
+    students1.forEach(student1 => {
+        const newDiv = document.createElement('div');
+        newDiv.classList.add('DIVTASK');
+
+        const studentsinput = document.createElement('input');
+        studentsinput.type = 'checkbox';
+        studentsinput.value = student1.name;
+        studentsinput.setAttribute('id', "checkBox" + student1.name);
+        studentsinput.classList.add('Checkbox');
+        studentsinput.addEventListener('click', SaveStudentsbyClick)
+        const label = document.createElement('label');
+        label.innerHTML = student1.name;
+        label.classList.add('CheckboxLabel');
+        label.setAttribute('for', "checkBox" + student1.name);
+        
+        studentsList.appendChild(newDiv);
+        newDiv.appendChild(label);
+        newDiv.appendChild(studentsinput);
     });
 }
 
-
-let owners = [];
+let CreateStudent = [];
 function SaveStudentsbyClick() {
-    const classId = document.getElementById('dropdown1').value; 
-    const selectedClasses = classes.filter(classObject => classObject.title === classId);
+    let checkedStudents = [];
 
-    const studentChecked = selectedClasses.filter(classObject => {
-        const studentCheckBox = document.getElementById("checkBox" + classObject.owner);
-        return studentCheckBox && studentCheckBox.checked;
+    students1.forEach(student1 => {
+        const studentCheckBox = document.getElementById("checkBox" + student1.name);
+        if (studentCheckBox && studentCheckBox.checked) {
+            checkedStudents.push(student1.name);
+        }
     });
 
-    owners = studentChecked.map(classObject => classObject.owner);
-    console.log(owners);
-    const listStudents = new Map();
-    studentChecked.forEach(classObject => {
-        console.log(classObject.owner);
-        listStudents.set(classObject.owner, classObject);
-    });    
+    CreateStudent = checkedStudents;
+    console.log("Students checked:", checkedStudents);    
 }
+
 
 async function LoadCoursesForUser() {
     const dropdown = document.getElementById('dropdown1');
@@ -249,13 +241,10 @@ async function LoadCoursesForUser() {
 
     
 }
-var course; // Corrected variable name
-
+var course;
 LoadCoursesForUser().then(() => {
     const dropdown = document.getElementById('dropdown1');
-    
-    // Attach an event listener to the dropdown to handle change events
-    dropdown.addEventListener('change', () => {
+        dropdown.addEventListener('change', () => {
         course = dropdown.value; // Assign the value to 'course'
         loadStudentsForClass()
     });
