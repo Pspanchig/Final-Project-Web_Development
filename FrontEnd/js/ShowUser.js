@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', async () => {
     LoadFunctions();    
+    LoadGroups();
+
 });
 
 document.getElementById('dropdown').addEventListener('change', loadStudentsForClass);
@@ -129,7 +131,6 @@ async function LoadGroups(){
         CreateGroup(Group.class, Group.title, Group.students, Group.info);
     })
 }
-LoadGroups();
 function CreateGroup(classe,title,students,info) {
     const container = document.getElementById('Groups-Conainer'); 
 
