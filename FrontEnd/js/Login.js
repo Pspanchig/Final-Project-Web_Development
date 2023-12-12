@@ -3,7 +3,8 @@ async function loginUser() {
     const password = document.getElementById('password').value;
     const isProfessorChecked = document.getElementById('loginAsOption1').checked;
     
-    const APIURL = 'https://1810pspanchig.azurewebsites.net/UserInfo';
+    const APIURL = 'http://localhost:5006/UserInfo';
+    // const APIURL = 'https://1810pspanchig.azurewebsites.net/UserInfo';
     
     const response = await fetch(APIURL);
     const users = await response.json();

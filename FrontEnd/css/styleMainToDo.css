@@ -122,7 +122,7 @@ input{
     /* height: 100%; */
     max-width: 100%;
     border: 2px solid black;
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);    
 }
 .task h1{
     background-color: #2a2a2a;
@@ -130,6 +130,9 @@ input{
     /* width: 10em; */
     color: white;
     border-radius: 1em;
+}
+.task h3{
+    /* color: aqua; */
 }
 #tasksList .task {
     background-color: #f4f4f4;

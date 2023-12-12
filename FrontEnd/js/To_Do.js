@@ -29,7 +29,7 @@ function searchInput() {
     const tasks = document.querySelectorAll(".task");
     
     tasks.forEach(task => {
-        let h2 = task.querySelector('h2'); 
+        let h2 = task.querySelector('h3'); 
         if (h2) {
             let text = h2.textContent; // Using textContent for consistency
             if (text.toUpperCase().indexOf(filter) > -1) {
