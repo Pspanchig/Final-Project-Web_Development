@@ -1,6 +1,7 @@
+import { getCurrentUser } from "./GetUserSource.js";
+
 document.addEventListener('DOMContentLoaded', async () => {
     LoadFunctions();    
-    LoadGroups();
 
 });
 
@@ -11,6 +12,8 @@ function LoadFunctions(){
     loadStudentsForClass();
     LoadCoursesForUser();
     LoadStudents();
+    LoadGroups();
+
 }
 
 async function LoadStudents(){
@@ -54,7 +57,6 @@ async function LoadCoursesForUser(){
         option.textContent = course.title;
         dropdown.appendChild(option);
     });    
-    CreateGroup();
 }
 
 var students = [];
@@ -103,7 +105,7 @@ async function loadStudentsForClass() {
 
 let owners = [];
 function SaveStudentsbyClick() {
-    console.log('Working');
+    // console.log('Working');
     const classId = document.getElementById('dropdown').value; 
     const selectedClasses = classes.filter(classObject => classObject.title === classId);
 
@@ -125,12 +127,19 @@ async function LoadGroups(){
     const APIURL = 'http://localhost:5006/GroupInfo';
     const response = await fetch(APIURL);
     const Groups = await response.json();
+    const currentUser = getCurrentUser();
+    const username = currentUser.username; 
+    const UserGroup = Groups.filter(group => group.owner === username);
+    UserGroup.forEach(group =>{
+        CreateGroup(group.class, group.title, group.students, group.info);
+    })
 
+    
     Groups.forEach(Group => {
         console.log(Group.class)
-        CreateGroup(Group.class, Group.title, Group.students, Group.info);
     })
 }
+
 function CreateGroup(classe,title,students,info) {
     const container = document.getElementById('Groups-Conainer'); 
 
@@ -161,6 +170,7 @@ document.getElementById('CreateGrooup').addEventListener('submit', function(e){
     e.preventDefault();
     CreateGroupAPI()
 })
+
 async function CreateGroupAPI() {
     const APIEndpoint = 'http://localhost:5006/NewGroup';
     
@@ -168,19 +178,22 @@ async function CreateGroupAPI() {
     const Title = document.getElementById('groupName').value;
     const Description = document.getElementById('DescriptionofGroup').value;
 
-    const NewGroup = {
-        Title: Title,
-        Class: Course,
-        Students: owners, // You might want to replace this with actual student data
-        Info: Description
-    };
+    for (let index = 0; index < owners.length; index++) {
+        const owner = owners[index];
+        const NewGroup = {
+            Title: Title,
+            Class: Course,
+            Students: owners,
+            Owner: owner,
+            Info: Description
+        };
 
-    await fetch(APIEndpoint, {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify(NewGroup)
-    });
-
+        await fetch(APIEndpoint, {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(NewGroup)
+        });
+    }
     
 }
 function toggleSelectAll() {

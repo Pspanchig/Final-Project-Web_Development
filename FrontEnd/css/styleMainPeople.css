@@ -62,8 +62,11 @@
   border-radius: var(--border-radius); 
   overflow-x: auto;
   overflow-y: auto;
+  /* min-width: 100%; */
+
 }
 .TitleGroups{
+  /* -width: 100vh; */
   margin-right: 1em;
   display: flex;
   flex-direction: column;
@@ -72,6 +75,7 @@
   text-align: center;
   background-color: var(--bg-secondary);
   border-radius: var(--border-radius);
+  
 }
 .TitleGroups h1{
   color: white;

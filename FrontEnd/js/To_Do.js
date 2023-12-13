@@ -1,6 +1,8 @@
 import { getCurrentUser } from "./GetUserSource.js";
 
 
+LoadTaskForUser();
+document.getElementById("find").addEventListener('input', searchInput);
 document.addEventListener('DOMContentLoaded', () => {
         
     document.getElementById('addTaskButton').addEventListener('click', function() {
@@ -40,18 +42,12 @@ function searchInput() {
         }
     });
 }
-
-
-document.getElementById("find").addEventListener('input', searchInput);
-
 function getNewTaskId() {
     const lastId = parseInt(localStorage.getItem('lastTaskId') || '0', 10);
     const newId = lastId + 1;
     localStorage.setItem('lastTaskId', newId.toString()); 
     return newId;
 }
-
-
 async function LoadTaskForUser() {
     const currentUser = getCurrentUser();
     const APIURL = 'http://localhost:5006/TasksInfo';
@@ -73,65 +69,83 @@ async function LoadTaskForUser() {
     }
     
 }
-LoadTaskForUser();
 
-function createElement(taskTitle, taskDescription, id,courseName) {
-
-    const container = document.getElementById('taskListLeft');
-
-
+function createTaskElement(taskTitle, taskDescription, id, courseName) {
     const taskDiv = document.createElement('div');
     taskDiv.classList.add('task');
     taskDiv.setAttribute('data-task-id', id); 
     
     const taskCourse = document.createElement('h1');
     taskCourse.textContent = courseName;
+    taskDiv.appendChild(taskCourse);
 
     const taskTitleElement = document.createElement('h3');
     taskTitleElement.textContent = taskTitle;
+    taskDiv.appendChild(taskTitleElement);
 
+    const taskInfoElement = document.createElement('p');
+    taskInfoElement.textContent = taskDescription;
+    taskDiv.appendChild(taskInfoElement);
+
+    taskDiv.appendChild(createDeleteButton(id, taskDiv));
+    taskDiv.appendChild(createMoveToRightButton(id, taskDiv));
+
+    return taskDiv;
+}
+function addDragEvents(taskDiv, id) {
     taskDiv.setAttribute('draggable', 'true');
     taskDiv.addEventListener('dragstart', function(event) {
         event.dataTransfer.setData('text/plain', id);
     });
-
-    const taskInfoElement = document.createElement('p');
-    taskInfoElement.textContent = taskDescription;
-
-    taskDiv.appendChild(taskCourse);
-    taskDiv.appendChild(taskTitleElement);
-    taskDiv.appendChild(taskInfoElement);
-
+}
+function createDeleteButton(id, taskDiv) {
     const deleteButton = document.createElement('button');
-    deleteButton.textContent = 'Delete';
-    deleteButton.onclick = function() {
-        RemoveElementFromAPI(id).then(() => {
-            container.removeChild(taskDiv);
-        }).catch(error => {
-            console.error("Could not delete task:", error);
-        });
-    };
+    deleteButton.textContent = 'Complete';
+    
+    deleteButton.addEventListener('click', async () => {
+        await RemoveElementFromAPI(id);
+        taskDiv.remove();
+    });
+    return deleteButton;
+}
+function createMoveToRightButton(id, taskDiv) {
+    const moveToRightButton = document.createElement('button');
+    moveToRightButton.textContent = 'Move to Right';
 
-    taskDiv.appendChild(deleteButton);
-    container.appendChild(taskDiv); 
-
+    moveToRightButton.addEventListener('click', () => {
+        const taskListRight = document.getElementById('taskListRight');
+        taskListRight.appendChild(taskDiv);
+    });
+    return moveToRightButton;
+}
+function addTaskToContainer(containerId, taskElement) {
+    const container = document.getElementById(containerId);
+    container.appendChild(taskElement);
+}
+function initializeDragAndDrop() {
     const taskListLeft = document.getElementById('taskListLeft');
-const taskListRight = document.getElementById('taskListRight');
+    const taskListRight = document.getElementById('taskListRight');
 
-[taskListLeft, taskListRight].forEach(dropZone => {
-    dropZone.addEventListener('dragover', function(event) {
-        event.preventDefault(); // Necessary to allow the drop
-    });
+    [taskListLeft, taskListRight].forEach(dropZone => {
+        dropZone.addEventListener('dragover', function(event) {
+            event.preventDefault(); 
+        });
 
-    dropZone.addEventListener('drop', function(event) {
-        event.preventDefault();
-        const taskId = event.dataTransfer.getData('text/plain');
-        const taskDiv = document.querySelector(`[data-task-id="${taskId}"]`);
-        if (taskDiv) {
-            dropZone.appendChild(taskDiv);
-        }
+        dropZone.addEventListener('drop', function(event) {
+            event.preventDefault();
+            const taskId = event.dataTransfer.getData('text/plain');
+            const taskDiv = document.querySelector(`[data-task-id="${taskId}"]`);
+            if (taskDiv) {
+                dropZone.appendChild(taskDiv);
+            }
+        });
     });
-});
+}
+function createElement(taskTitle, taskDescription, id, courseName) {
+    const taskElement = createTaskElement(taskTitle, taskDescription, id, courseName);
+    addDragEvents(taskElement, id);
+    addTaskToContainer('taskListLeft', taskElement);
+    initializeDragAndDrop();
 }
 
 async function RemoveElementFromAPI(id) {
@@ -145,9 +159,6 @@ async function RemoveElementFromAPI(id) {
     });                
     console.log(`Element with ID ${id} was removed successfully.`);    
 }
-
-
-
 async function CreateTaskAPI(username, taskTitle, taskInfo) {
     console.log("Esta Funcionando: " + CreateStudent);
 
@@ -170,11 +181,8 @@ async function CreateTaskAPI(username, taskTitle, taskInfo) {
         });
     }
 }
-
-
 var students1 = [];
 var classes = [];
-
 async function loadStudentsForClass() {    
     const studentsList = document.getElementById('Tasks1');
     const classId = document.getElementById('dropdown1').value;
@@ -188,21 +196,26 @@ async function loadStudentsForClass() {
     const APIURL = 'http://localhost:5006/ClassInfo';
     const response = await fetch(APIURL);
     classes = await response.json(); 
-        
-    students1.forEach(student1 => {
+
+    const currentUser = getCurrentUser();
+    const username = currentUser.username; 
+    const UserTask = classes.filter(classe => classe.title === classId);
+    console.log(UserTask)
+    UserTask.forEach(student1 => {
+        console.log("Here"+ classId);
         const newDiv = document.createElement('div');
         newDiv.classList.add('DIVTASK');
 
         const studentsinput = document.createElement('input');
         studentsinput.type = 'checkbox';
-        studentsinput.value = student1.name;
-        studentsinput.setAttribute('id', "checkBox" + student1.name);
+        studentsinput.value = student1.owner;
+        studentsinput.setAttribute('id', "checkBox" + student1.owner);
         studentsinput.classList.add('Checkbox');
         studentsinput.addEventListener('click', SaveStudentsbyClick)
         const label = document.createElement('label');
-        label.innerHTML = student1.name;
+        label.innerHTML = student1.owner;
         label.classList.add('CheckboxLabel');
-        label.setAttribute('for', "checkBox" + student1.name);
+        label.setAttribute('for', "checkBox" + student1.owner);
         
         studentsList.appendChild(newDiv);
         newDiv.appendChild(label);
@@ -237,9 +250,7 @@ async function LoadCoursesForUser() {
         option.value = course.title; 
         option.textContent = course.title;
         dropdown.appendChild(option);
-    });
-
-    
+    });    
 }
 var course;
 LoadCoursesForUser().then(() => {
