@@ -4,7 +4,7 @@ import * as Domain from '../Domain/Domain_To_Do.js'
 
 export async function LoadCoursesForUser() {
     const dropdown = document.getElementById('dropdown1');
-    const APIURL = 'https://1810pspanchig.azurewebsites.net/ClassInfo';
+    const APIURL = 'http://localhost:5006/ClassInfo';
     const response = await fetch(APIURL);
     const courses = await response.json();
     
@@ -17,7 +17,7 @@ export async function LoadCoursesForUser() {
 }
 export async function RemoveElementFromAPI(id) {
 
-    const APIURL = `https://1810pspanchig.azurewebsites.net/TasksInfo/${id}`;
+    const APIURL = `http://localhost:5006/TasksInfo/${id}`;
     await fetch(APIURL, {
         method: 'DELETE',
         headers: {
@@ -28,7 +28,7 @@ export async function RemoveElementFromAPI(id) {
 }
 export async function LoadTaskForUser() {
     const currentUser = Name.getCurrentUser();
-    const APIURL = 'https://1810pspanchig.azurewebsites.net/TasksInfo';
+    const APIURL = 'http://localhost:5006/TasksInfo';
 
     if (!currentUser) {
         console.error('No current user or username not found.');
@@ -55,11 +55,11 @@ export async function loadStudentsForClass() {
     const classId = document.getElementById('dropdown1').value;
 
     studentsList.innerHTML = '';
-    const APIS = 'https://1810pspanchig.azurewebsites.net/UserInfo';
+    const APIS = 'http://localhost:5006/UserInfo';
     const responseS = await fetch(APIS);
     students1 = await responseS.json(); 
     
-    const APIURL = 'https://1810pspanchig.azurewebsites.net/ClassInfo';
+    const APIURL = 'http://localhost:5006/ClassInfo';
     const response = await fetch(APIURL);
     classes = await response.json(); 
 
@@ -106,7 +106,7 @@ export async function CreateTaskAPI(username, taskTitle, taskInfo) {
             ID: Domain.getNewTaskId()
         };
 
-        const APIURL = 'https://1810pspanchig.azurewebsites.net/NewTask';
+        const APIURL = 'http://localhost:5006/NewTask';
         await fetch(APIURL, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },

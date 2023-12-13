@@ -4,7 +4,7 @@ import * as Name from '../GetUserSource.js';
 
 export async function LoadStudents(){
     const userListContainer = document.getElementById('userList');
-    const APIURL = 'https://1810pspanchig.azurewebsites.net/UserInfo';
+    const APIURL = 'http://localhost:5006/UserInfo';
     const response = await fetch(APIURL);
     const users = await response.json();
 
@@ -31,7 +31,7 @@ export async function LoadStudents(){
 export async function LoadCoursesForUser(){
     
     const dropdown = document.getElementById('dropdown');
-    const APIURL = 'https://1810pspanchig.azurewebsites.net/ClassInfo';
+    const APIURL = 'http://localhost:5006/ClassInfo';
     const response = await fetch(APIURL);
 
     const courses = await response.json();
@@ -45,7 +45,7 @@ export async function LoadCoursesForUser(){
 }
 
 export async function CreateGroupAPI() {
-    const APIEndpoint = 'https://1810pspanchig.azurewebsites.net/NewGroup';
+    const APIEndpoint = 'http://localhost:5006/NewGroup';
     
     const Course = document.getElementById('dropdown').value;
     const Title = document.getElementById('groupName').value;
@@ -70,7 +70,7 @@ export async function CreateGroupAPI() {
     
 }
 export async function LoadGroups(){
-    const APIURL = 'https://1810pspanchig.azurewebsites.net/GroupInfo';
+    const APIURL = 'http://localhost:5006/GroupInfo';
     const response = await fetch(APIURL);
     const Groups = await response.json();
     const currentUser = Name.getCurrentUser();
@@ -94,11 +94,11 @@ export async function loadStudentsForClass() {
     const classId = document.getElementById('dropdown').value;
     const studentsList = document.getElementById('students');
     
-    const APIS = 'https://1810pspanchig.azurewebsites.net/UserInfo';
+    const APIS = 'http://localhost:5006/UserInfo';
     const responseS = await fetch(APIS);
     students = await responseS.json();
     
-    const APIURL = 'https://1810pspanchig.azurewebsites.net/ClassInfo';
+    const APIURL = 'http://localhost:5006/ClassInfo';
     const response = await fetch(APIURL);
     classes = await response.json();
     

@@ -2,7 +2,7 @@ import * as Domain from '../Domain/Domain_Dashboar.js';
 import * as UI from '../ui/Ui_Dashboard.js';
 
 export async function CreateClassAPI(courseNameValue, courseNumberValue, courseDescValue) {
-    const APIURL = 'https://1810pspanchig.azurewebsites.net/NewClass';
+    const APIURL = 'http://localhost:5006/NewClass';
 
     for (let index = 0; index < Domain.NewOwners().length; index++) {
         const Student = Domain.NewOwners()[index];
@@ -24,7 +24,7 @@ export async function CreateClassAPI(courseNameValue, courseNumberValue, courseD
 
 }
 export async function LoadCourseForUser(username) {
-    const APIURL = 'https://1810pspanchig.azurewebsites.net/ClassInfo';
+    const APIURL = 'http://localhost:5006/ClassInfo';
     
     const response = await fetch(APIURL);        
     const courses = await response.json();        
@@ -40,7 +40,7 @@ export async function LoadCourseForUser(username) {
 }
 
 export async function ShowStudentsInput() {
-    const APIS = 'https://1810pspanchig.azurewebsites.net/UserInfo';
+    const APIS = 'http://localhost:5006/UserInfo';
 
     const responseS = await fetch(APIS);
     const students = await responseS.json();

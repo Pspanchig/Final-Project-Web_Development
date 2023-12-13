@@ -14,7 +14,7 @@ export async function registerUser() {
         document.getElementById('codeSection').style.display = 'none';
     });
 
-    const APIURL = 'https://1810pspanchig.azurewebsites.net/';
+    const APIURL = 'http://localhost:5006/';
     
     const response = await fetch(APIURL);
     console.log('respons', await response.text())
@@ -41,7 +41,7 @@ export async function registerUser() {
     window.location.href = 'index.html';
 }
 async function CreateUserAPI(User, Passwrord, bool){
-    const APIURL = 'https://1810pspanchig.azurewebsites.net/';
+    const APIURL = 'http://localhost:5006/';
     
     const response = await fetch(APIURL);
     console.log('respons', await response.text())

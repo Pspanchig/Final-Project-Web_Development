@@ -4,7 +4,7 @@ import * as Domain from '../Domain/Domain_Share.js'
 
 
 export async function loadChatFromAPI() {
-    const API_URL = 'https://1810pspanchig.azurewebsites.net/ChatInfo';
+    const API_URL = 'http://localhost:5006/ChatInfo';
 
 
         const response = await fetch(API_URL);
@@ -23,7 +23,7 @@ export async function CreateChatAPI() {
         return;
     }
 
-    const APIUser = 'https://1810pspanchig.azurewebsites.net/UserInfo';
+    const APIUser = 'http://localhost:5006/UserInfo';
     const responseUser = await fetch(APIUser);
     const users = await responseUser.json();
     var bool = true;
@@ -42,7 +42,7 @@ export async function CreateChatAPI() {
     };
     console.log(NewChat);
 
-    const APIURL = 'https://1810pspanchig.azurewebsites.net/NewChat';
+    const APIURL = 'http://localhost:5006/NewChat';
     await fetch(APIURL, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
