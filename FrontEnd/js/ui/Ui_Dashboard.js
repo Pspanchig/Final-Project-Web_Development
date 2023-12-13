@@ -5,7 +5,7 @@ export function AddCourseToDOM(courseNameValue, courseNumberValue,courseDescValu
     newElement.classList.add('Dashbord-Container');
 
     const anchor = document.createElement('a');
-    anchor.href = '/FrontEnd/CoursePage.html';
+    anchor.href = 'CoursePage.html';
 
     const itemDiv = document.createElement('div');
     itemDiv.classList.add('Dashbord-Container-Item');
