@@ -82,6 +82,21 @@ app.MapPost("/NewGroup", (Group group) => {
     File.WriteAllText(filepath3, json3);
 });
 ////////////////////////////////////////////////////////////////////
+string filepath4 = "Page.json";
+List<Page> page = new();
+
+if(File.Exists(filepath4)){
+    string readusers1 = File.ReadAllText(filepath4);
+    page.AddRange(JsonSerializer.Deserialize<List<Page>>(readusers1));
+}
+
+app.MapGet("/PageInfo", () => page);
+app.MapPost("/NewPage", (Page pag) => {
+    page!.Add(pag);
+    string json4 = JsonSerializer.Serialize(page);
+    File.WriteAllText(filepath4, json4);
+});
+////////////////////////////////////////////////////////////////////
 string ChatsPath = "Chat.json";
 List<Chat> Chats = new();
 
@@ -110,6 +125,11 @@ app.MapPost("/NewChat", (Chat chat) => {
 app.Run();
 
 public record Chat(string User, string Text, bool IsProffesor, int ID);
+public record Page(string CourseName, string Instructor,string description,
+                    string Courseobjective, string Courseobjective1, 
+                    string Courseobjective2, string Topic, string Reading, 
+                    double Assigments, double Project, double Final, string Email, 
+                    string office);
 public record User(string Name, string Password, bool IsProffesor);
 public record Course(string Title, int Number, string info, string Owner);
 public record TODO(string CourseName, string Title, string Info, string Owner, int ID);

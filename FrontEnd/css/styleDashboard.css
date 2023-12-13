@@ -6,7 +6,23 @@
   --border-radius: 0.5em; /* Consistent border radius */
   --box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.397); /* Subtle shadow */
 }
-
+.add{
+  overflow-y: auto;
+  max-height: 15em;
+  background-color: var(--Box-color);
+  padding: 0.6em;
+  padding-bottom: 0.01em;
+  padding-top: 1em;
+  margin-bottom: 0.3em;
+}
+.MicroContainer{
+  min-width: 13em;
+  min-height: 15em;
+  background-color: var(--Box-color);
+  margin: 1em;
+  padding: 0.5em;
+  padding-top: 1em;
+}
 .Main-Container{
   display: flex;
   flex-direction: row;  
@@ -20,10 +36,12 @@
   background-color: white;
   min-height: 10em;
   padding: 3em;
-  height: 50vh;
-  width: 40vh;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 79vh;
+  width: 50vh;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   overflow-y: auto;
   
   min-width: 20em;
@@ -40,7 +58,14 @@ input[type='radio']:checked + label {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+}
+.organize{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+  
 }
 .CreateClassButton{
   margin-top: auto;
@@ -141,7 +166,7 @@ body {
   padding: 0;
 }
 .Dashbord-Container:nth-child(even) {
-  padding: 10em;
+  /* padding: em; */
   background-color: #C70039;
 }
 .subContainer a:nth-child(even) .Dashbord-Container {

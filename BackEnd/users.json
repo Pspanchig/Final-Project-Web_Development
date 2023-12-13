@@ -23,5 +23,10 @@
         "Name": "student1",
         "Password": "1",
         "IsProffesor": false
+    },
+    {
+        "Name": "12344",
+        "Password": "12344",
+        "IsProffesor": false
     }
 ]
