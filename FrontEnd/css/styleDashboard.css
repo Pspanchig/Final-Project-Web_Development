@@ -14,14 +14,19 @@
   padding-bottom: 0.01em;
   padding-top: 1em;
   margin-bottom: 0.3em;
+  border-radius: var(--border-radius);
+
 }
 .MicroContainer{
   min-width: 13em;
   min-height: 15em;
+  max-height: 10em;
   background-color: var(--Box-color);
   margin: 1em;
-  padding: 0.5em;
+  padding: 0.7em;
   padding-top: 1em;
+  border-radius: var(--border-radius);
+  overflow-y: auto;
 }
 .Main-Container{
   display: flex;
@@ -166,7 +171,6 @@ body {
   padding: 0;
 }
 .Dashbord-Container:nth-child(even) {
-  /* padding: em; */
   background-color: #C70039;
 }
 .subContainer a:nth-child(even) .Dashbord-Container {
@@ -176,4 +180,8 @@ body {
   
   transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.MicroContainer h3{
+  background-color: white;
+  border-radius: var(--border-radius);
 }

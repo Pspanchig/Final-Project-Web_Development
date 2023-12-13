@@ -24,7 +24,7 @@ export async function loginUser() {
                     window.location.href = 'ProfessorPage1.html'; 
                 } else if (!isProfessorChecked && !user.IsProfessor) {
                     alert("Login Successfully");
-                    window.location.href = '/FrontEnd/Page3.html';
+                    window.location.href = 'Page3.html';
                 } else {
                     alert("Role does not match with our records.");
                 }

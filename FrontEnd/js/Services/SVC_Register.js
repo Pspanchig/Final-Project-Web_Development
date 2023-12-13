@@ -37,8 +37,8 @@ export async function registerUser() {
     
     CreateUserAPI(username, password, isOptionOne);    
     localStorage.setItem(username, JSON.stringify(user));
-    alert('Usuario registrado con éxito');
-    window.location.href = '/FrontEnd/Page3.html';
+    alert('User succesfuly created!');
+    window.location.href = 'index.html';
 }
 async function CreateUserAPI(User, Passwrord, bool){
     const APIURL = 'https://1810pspanchig.azurewebsites.net/';

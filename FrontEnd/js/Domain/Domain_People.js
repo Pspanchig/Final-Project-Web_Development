@@ -29,8 +29,7 @@ export function NewOwners(){
 }
 
 export function LoadFunctions(){
-    // document.getElementById('dropdown').addEventListener('change', SVC.loadStudentsForClass);
-    // document.getElementById('checkAll').addEventListener('change', Domain.toggleSelectAll);
+
     SVC.loadStudentsForClass();
     SVC.LoadCoursesForUser();
     SVC.LoadStudents();
